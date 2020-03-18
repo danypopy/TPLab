@@ -3,21 +3,23 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-	int v[50], i, n, *a, s=0;
-	a = &v[0];
-	printf("Cate elemente sa aiba vectorul?\n"); scanf("%d", &n);
-	for (i = 0; i < n; i++)
+	int* v, * i, * n, * s;
+	n = (int*)malloc(sizeof(int));
+	printf("Cate elemente sa aiba vectorul?\n"); scanf("%d", n);
+	v = (int*)malloc((*n) * sizeof(int));
+	s = (int*)malloc(sizeof(int));
+	*s = 0;
+	printf("Scrieti cele %d elemente ale vectorului\n", *n);
+	for (i = v; i < v + (*n); i++)
 	{
-		printf("v[%d]=", i+1); scanf("%d", &v[i]);
+		scanf("%d", i);
+		*s = *s + *i;
 	}
-	for (i = 0; i < n; i++)
-	{
-		s = s + *(a + i);
-	}
-	printf("Suma elementelor vectorului este: %d", s);
+	printf("Suma elementelor vectorului este: %d\n", *s);
 	system("pause");
 	return 0;
 }
