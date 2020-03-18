@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *suma(int a, int b)
+int* suma(int a, int b)
 {
 	int s = 0;
 	s = a + b;
@@ -15,10 +15,11 @@ int *suma(int a, int b)
 
 int main()
 {
-	int x, y, *s;
+	int x, y, * s;
+	s = (int*)malloc(sizeof(int));
 	printf("primul numar: "); scanf("%d", &x);
 	printf("al doilea numar: "); scanf("%d", &y);
-	s = suma(x,y);
+	s = suma(x, y);
 	printf("Suma dintre %d si %d este %d\n", x, y, s);
 	system("pause");
 	return 0;
