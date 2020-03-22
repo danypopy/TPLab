@@ -4,8 +4,8 @@
 
 /*
 	6.Se citeste de la tastatura un numar zecimal pana in 255. Sa se afiseze forma binara a numarului iar apoi din sirul binar sa se genereze valoarea maxima:
-27 -> 0001 1011 (val binara)	1111 0000 – Valoarea maxima
-5 -> 0000 0101 (val binara)		1100 0000 – Valoarea maxima
+27 -> 0001 1011 (val binara)	1111 0000 â€“ Valoarea maxima
+5 -> 0000 0101 (val binara)		1100 0000 â€“ Valoarea maxima
 */
 
 void transformare_baza(int numar)
