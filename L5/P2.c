@@ -17,9 +17,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define CAPACITATE 25
+#define CAPACITATE 25 // setam capacitatea stivei.
 
-int stack[CAPACITATE], top = -1;
+int stack[CAPACITATE], top = -1; // declaram variabile globale stiva si varful stivei.
 
 void push();
 int transformareBinar();
@@ -41,34 +41,34 @@ int main()
 
 void push(int numar)
 {
-	if (top == CAPACITATE - 1)
+	if (top == CAPACITATE - 1) // verificam daca stiva este plina.
 	{
 		printf("Stiva este plina!\n");
 	}
 	else
 	{
-		stack[++top] = numar;
+		stack[++top] = numar; // altfel adaugam elementul.
 	}
 }
 
 int transformareBinar(int C, int N)
 {
 	int numar;
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; i++) // luam un contor de la 0 la N.
 	{
 		printf("numar= ");
-		scanf("%d", &numar);
-		if ((numar >> C) & 1 == 1)
-			push(numar);
+		scanf("%d", &numar); // citim cele "N" numere.
+		if ((numar >> C) & 1 == 1) // daca numarul are pe bitul "C" 1.
+			push(numar); // atunci se adauga numarul in stiva.
 	}
 }
 
 void afisareStiva()
 {
-	int i = top;
-	while (i != -1)
+	int i = top; // luam un i egal cu numarul elementelor din stiva.
+	while (i != -1) // cat timp stiva nu este goala.
 	{
-		printf("%d\n", stack[i]);
-		i--;
+		printf("%d\n", stack[i]); // se afiseaza elementul de pe pozitia i.
+		i--; // se scade pozitia i.
 	}
 }
